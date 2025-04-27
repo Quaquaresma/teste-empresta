@@ -5,10 +5,6 @@ use App\Http\Controllers\InstituicaoController;
 use App\Http\Controllers\SimulacaoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::prefix('instituicao')->group(function () {
     Route::get('/',[InstituicaoController::class, 'index'])->name('instituicaoIndex');
 });
